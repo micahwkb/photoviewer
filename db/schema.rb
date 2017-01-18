@@ -10,16 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170118162114) do
-
-  create_table "images", force: :cascade do |t|
-    t.integer  "image_id"
-    t.string   "name"
-    t.string   "image_url"
-    t.string   "original_url"
-    t.float    "rating"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
