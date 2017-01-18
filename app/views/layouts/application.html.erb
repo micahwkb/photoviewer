@@ -5,10 +5,13 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js" %>
-  </head>
+    <%= javascript_include_tag "https://use.fontawesome.com/d554521dec.js" %>
 
+  </head>
+  <%= render 'layouts/nav' %>
   <body>
     <%= yield %>
   </body>

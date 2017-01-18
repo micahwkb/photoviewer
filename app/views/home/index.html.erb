@@ -1,8 +1,5 @@
 <div class="row photos-container">
   <% @photos.each do |photo| %>
-    <div>
     <%= render partial: 'photo', locals: {photo: photo} %>
-
-    </div>
   <% end %>
 </div>

@@ -1,3 +1,38 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+div.photos-container {
+  display: block;
+  div.valign-wrapper {
+    height: 88%;
+    img {
+      margin: auto;
+      max-height: 99%;
+      max-width: 99%;
+      height: auto;
+      width: auto;
+     }
+  }
+  div.card-content {
+    padding: 1em;
+    border-top: 1px solid lightgray;
+    height: 3em;
+    line-height: 2em;
+    span a {
+      color: #4C4C4C;
+      font-weight: 700;
+    }
+  }
+  span.rating,
+  span.like-btn {
+    position: absolute;
+  }
+  span.rating {
+    right: 3em;
+  }
+  span.like-btn {
+    transition: all ease .5s;
+    right: 1em;
+  }
+  span.like-btn:hover {
+    color: crimson;
+    font-size: 1.1em;
+  }
+}

@@ -1,19 +1,32 @@
 <% if !photo['nsfw'] %>
-  <div>
-    <div class="col s12 m6">
-      <div class="card">
-        <div class="card-image">
-          <%= image_tag(photo['image_url'], alt: photo['name'])%>
-        </div>
-        <div class="card-content">
-          <p><%= photo['name'] %> by <%= photo['user']['firstname']%> <%= photo['user']['lastname'] %></p>
-        </div>
-        <%# photo['id'] %>
-        <%= link_to('See on 500px', "https://www.500px.com#{photo['url']}") %>
-        <%= photo['rating'] %>
 
+  <div class="col s12 m12 l6">
+    <div class="card large hoverable">
+      <div class="valign-wrapper">
+        <%= image_tag(photo['image_url'], alt: photo['name'])%>
+      </div>
+      <div class="card-content">
+         <span class="">
+          <!-- photo title -->
+          <cite class="tooltipped"
+               data-position="top"
+               data-delay="10"
+               data-tooltip="view on 500px"
+               href="#">
+            <%= link_to("#{photo['name']}", "https://www.500px.com#{photo['url']}") %>
+          </cite>
+          <!-- photographer -->
+          by
+          <%= photo['user']['firstname']%> <%= photo['user']['lastname'] %>
+        </span>
+
+        <span class="rating">Rating: <strong><%= photo['rating'] %></strong></span>
+
+        <%# if current_user %>
+          <span class="like-btn"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+        <%# end %>
       </div>
     </div>
-
   </div>
+
 <% end %>
