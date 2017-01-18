@@ -1,0 +1,8 @@
+<% if !photo['nsfw'] %>
+  <p>
+    <%= photo['id'] %>
+    <%= photo['url'] %>
+    <%= photo['rating'] %>
+  </p>
+  <%= image_tag(photo['image_url'], alt: photo['name'])%>
+<% end %>
