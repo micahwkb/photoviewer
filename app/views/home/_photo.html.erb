@@ -1,8 +1,8 @@
 <% if !photo['nsfw'] %>
-  <p>
-    <%= photo['id'] %>
-    <%= photo['url'] %>
+  <div>
+    <%# photo['id'] %>
+    <%= link_to('See on 500px', "https://www.500px.com#{photo['url']}") %>
     <%= photo['rating'] %>
-  </p>
-  <%= image_tag(photo['image_url'], alt: photo['name'])%>
+    <%= image_tag(photo['image_url'], alt: photo['name'])%>
+  </div>
 <% end %>
