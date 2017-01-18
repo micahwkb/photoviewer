@@ -39,6 +39,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Storage of secure data e.g. API key(s)
+gem 'dotenv-rails', :groups => [:development, :test]
+# Styling gems
+gem 'font-awesome-rails'
+gem 'materialize-sass'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

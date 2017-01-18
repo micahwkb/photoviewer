@@ -1,8 +1,19 @@
 <% if !photo['nsfw'] %>
   <div>
-    <%# photo['id'] %>
-    <%= link_to('See on 500px', "https://www.500px.com#{photo['url']}") %>
-    <%= photo['rating'] %>
-    <%= image_tag(photo['image_url'], alt: photo['name'])%>
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <%= image_tag(photo['image_url'], alt: photo['name'])%>
+        </div>
+        <div class="card-content">
+          <p><%= photo['name'] %> by <%= photo['user']['firstname']%> <%= photo['user']['lastname'] %></p>
+        </div>
+        <%# photo['id'] %>
+        <%= link_to('See on 500px', "https://www.500px.com#{photo['url']}") %>
+        <%= photo['rating'] %>
+
+      </div>
+    </div>
+
   </div>
 <% end %>
