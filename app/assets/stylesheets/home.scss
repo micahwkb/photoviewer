@@ -1,5 +1,8 @@
 div.photos-container {
-  display: block;
+  position: relative;
+  .card.large {
+    height: 60vh;
+  }
   div.valign-wrapper {
     height: 88%;
     img {
@@ -33,6 +36,15 @@ div.photos-container {
   }
   span.like-btn:hover {
     color: crimson;
-    font-size: 1.1em;
   }
+}
+img.img-zoomed {
+          background-clip: padding-box;
+     -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  border: 1000px solid rgba(0,0,0,0.4);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

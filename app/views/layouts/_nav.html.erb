@@ -1,21 +1,13 @@
-<div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper white">
-        <a href="#!" class="brand-logo center blue-text">
-          <%= image_tag "500px-definitely-swiped-logo.png", alt: "not my logo" %>
-          Top 100
-        </a>
-        <ul class="right hide-on-med-and-down">
-          <li>
-            <a class="tooltipped"
-               data-position="left"
-               data-delay="10"
-               data-tooltip="sign into 500px"
-               href="#">
-              <i class="material-icons blue-text">perm_identity</i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+<div class="navbar">
+  <nav>
+    <div class="nav-wrapper white">
+      <a href="#!" class="brand-logo center blue-text">
+        <%= image_tag "500px-definitely-swiped-logo.png", alt: "500px logo (not my logo!)" %>
+        Top 100
+      </a>
+      <ul class="right">
+        <%= render 'layouts/nav_links' %>
+      </ul>
+    </div>
+  </nav>
+</div>
