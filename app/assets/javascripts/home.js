@@ -1,7 +1,7 @@
 'use strict'
 
 const imageZoom = () => {
-  $('img').on('click', function(e) {
+  $('img.card-thumb').on('click', function(e) {
     let imgURL = $(this).prop('src')
     let imgAlt = $(this).prop('alt')
     const imgZoom =

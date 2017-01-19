@@ -14,6 +14,13 @@
   </head>
   <%= render 'layouts/nav' %>
   <body>
+  <% if flash.notice.present? %>
+    <div class="center-align">
+      <h5 class="flash-notice">
+        <%= flash.notice %>
+      </h5>
+    </div>
+  <% end %>
     <%= yield %>
   </body>
 </html>

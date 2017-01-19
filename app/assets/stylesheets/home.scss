@@ -1,7 +1,7 @@
 div.photos-container {
   position: relative;
   .card.large {
-    height: 60vh;
+    height: 500px;
   }
   div.valign-wrapper {
     height: 88%;
@@ -12,11 +12,14 @@ div.photos-container {
       height: auto;
       width: auto;
      }
+     img.card-thumb:hover {
+      cursor: zoom-in;
+     }
   }
   div.card-content {
     padding: 1em;
     border-top: 1px solid lightgray;
-    height: 3em;
+    height: 4em;
     line-height: 2em;
     span a {
       color: #4C4C4C;
@@ -47,4 +50,5 @@ img.img-zoomed {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor: zoom-out;
 }
