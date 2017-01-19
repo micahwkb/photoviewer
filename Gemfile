@@ -44,6 +44,8 @@ gem 'materialize-sass'
 # Authentication
 # gem "oauth-plugin", "~> 0.4.0"
 gem 'omniauth-500px'
+gem 'oauth'
+gem 'multi_json'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

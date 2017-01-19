@@ -180,6 +180,8 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   materialize-sass
+  multi_json
+  oauth
   omniauth-500px
   puma (~> 3.0)
   rails (~> 5.0.1)

@@ -13,7 +13,7 @@
                data-delay="10"
                data-tooltip="view on 500px"
                href="#">
-            <%= link_to("#{photo['name']}", "https://www.500px.com#{photo['url']}") %>
+            <%= link_to("#{photo['name']}", "https://www.500px.com#{photo['url']}", target: 'blank') %>
           </cite>
           <!-- photographer -->
           by
@@ -22,8 +22,8 @@
 
         <span class="rating">Rating: <strong><%= photo['rating'] %></strong></span>
 
-        <% if session[:oauth] %>
-          <span class="like-btn"><i class="fa fa-heart-o" aria-hidden="true" style="font-weight: 700"></i></span>
+        <% if current_user %>
+          <span class="like-btn"><i class="fa fa-heart<%= !photo['liked'] ? '-o' : '' %>" aria-hidden="true" style="font-weight: 700"></i></span>
         <% end %>
       </div>
     </div>
