@@ -22,9 +22,9 @@
 
         <span class="rating">Rating: <strong><%= photo['rating'] %></strong></span>
 
-        <%# if current_user %>
+        <% if session[:oauth] %>
           <span class="like-btn"><i class="fa fa-heart-o" aria-hidden="true" style="font-weight: 700"></i></span>
-        <%# end %>
+        <% end %>
       </div>
     </div>
   </div>
