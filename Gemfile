@@ -5,11 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# Storage of secure data e.g. API key(s)
-gem 'dotenv-rails', :groups => [:development, :test]
-# Styling gems
-gem 'font-awesome-rails'
-gem 'materialize-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
@@ -41,9 +36,14 @@ gem 'jbuilder', '~> 2.5'
 
 # Storage of secure data e.g. API key(s)
 gem 'dotenv-rails', :groups => [:development, :test]
+
 # Styling gems
 gem 'font-awesome-rails'
 gem 'materialize-sass'
+
+# Authentication
+# gem "oauth-plugin", "~> 0.4.0"
+gem 'omniauth-500px'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
