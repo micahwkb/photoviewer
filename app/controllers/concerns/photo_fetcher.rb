@@ -9,7 +9,7 @@ module PhotoFetcher
     sort:           'rating',
     image_size:     '4',
     include_store:  'store_download',
-    rpp:            '1',
+    rpp:            '100',
     include_states: 'voted',
     exclude:        'nsfw'
   }
