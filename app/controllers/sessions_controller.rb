@@ -6,10 +6,15 @@ class SessionsController < ApplicationController
     @authorization = Authorization.find_by_provider_and_uid(auth_hash[:provider], auth_hash[:uid])
     if @authorization
       session[:user_id]     = @authorization.id
-      session[:user_key]    = auth_hash['extra'][:access_token].consumer.key
-      session[:user_token]  = auth_hash[:credentials][:token]
-      session[:user_secret] = auth_hash[:credentials][:secret]
-      byebug
+      session[:user_credentials] = {
+        consumer_key:    auth_hash['extra'][:access_token]
+                           .consumer.key,
+        consumer_secret: auth_hash['extra'][:access_token]
+                           .consumer.secret,
+        token:           auth_hash[:credentials][:token],
+        token_secret:    auth_hash[:credentials][:secret]
+      }
+
       redirect_to root_path
     else
       user = User.new name: auth_hash[:info][:name],
