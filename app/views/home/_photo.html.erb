@@ -1,32 +1,28 @@
-<% if !photo['nsfw'] %>
+<div class="col s12 m12 l6">
+  <div class="card large hoverable">
+    <div class="valign-wrapper">
+      <%= image_tag(photo['image_url'], alt: photo['name'], class: "card-thumb")%>
+    </div>
+    <div class="card-content">
+       <span class="">
+        <!-- photo title -->
+        <cite class="tooltipped"
+             data-position="top"
+             data-delay="10"
+             data-tooltip="view on 500px"
+             href="#">
+          <%= link_to("#{photo['name']}", "https://www.500px.com#{photo['url']}", target: 'blank') %>
+        </cite>
+        <!-- photographer -->
+        by
+        <%= photo['user']['firstname']%> <%= photo['user']['lastname'] %>
+      </span>
 
-  <div class="col s12 m12 l6">
-    <div class="card large hoverable">
-      <div class="valign-wrapper">
-        <%= image_tag(photo['image_url'], alt: photo['name'], class: "card-thumb")%>
-      </div>
-      <div class="card-content">
-         <span class="">
-          <!-- photo title -->
-          <cite class="tooltipped"
-               data-position="top"
-               data-delay="10"
-               data-tooltip="view on 500px"
-               href="#">
-            <%= link_to("#{photo['name']}", "https://www.500px.com#{photo['url']}", target: 'blank') %>
-          </cite>
-          <!-- photographer -->
-          by
-          <%= photo['user']['firstname']%> <%= photo['user']['lastname'] %>
-        </span>
+      <span class="rating">Rating: <strong><%= photo['rating'] %></strong></span>
 
-        <span class="rating">Rating: <strong><%= photo['rating'] %></strong></span>
-
-        <% if current_user %>
-          <span class="like-btn"><i class="fa fa-heart<%= !photo['liked'] ? '-o' : '' %>" aria-hidden="true" style="font-weight: 700"></i></span>
-        <% end %>
-      </div>
+      <% if current_user %>
+        <span class="like-btn"><i class="fa fa-heart<%= !photo['liked'] ? '-o' : '' %>" aria-hidden="true" style="font-weight: 700"></i></span>
+      <% end %>
     </div>
   </div>
-
-<% end %>
+</div>
